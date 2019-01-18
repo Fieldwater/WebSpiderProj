@@ -43,5 +43,4 @@ class SunshineSpider(scrapy.Spider):
 
                 item["content_img"] = ["http://wz.sun0769.com" + i for i in item['content_img']]
                 # print(item)
-                # print(count)
                 yield item
