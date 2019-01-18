@@ -20,7 +20,7 @@ class SunshineSpider(scrapy.Spider):
             yield scrapy.Request(
                 item["href"],
                 callback = self.parse_detail,
-                meta = {"item": item, "count": count}
+                meta = {"item": item}
             )
         # 翻页，用文本内容定位
         # next_url = response.xpath("//a[text()='>']/@href").extract_first()
@@ -33,7 +33,6 @@ class SunshineSpider(scrapy.Spider):
     # 处理详情页
     def parse_detail(self, response):
                 item = response.meta["item"]
-                count = response.meta["count"]
 
                 item["content_img"] = response.xpath("//div[@class='textpic']/img/@src").extract()
 
