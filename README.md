@@ -3,10 +3,18 @@ This repo includes what I practice using spider frame of Scrapy to finish severa
 
 1. TencentEmployInfo
 - Crawl the Employ information from Tencent official employ website
+
 2. Sunshine project
 - Crawl every post including title, href, publish date, text and image
 - Page turning to crawl more info
 - Store data in MongoDB
+
 3. Login project
 - directly crawl web with cookies
 - how to post request to sign in github.com with cookies
+
+4.JDBookInfo
+- Crawl book info through category
+- using scrapy_redis to achieve distributed spider
+- store data in redis
+ 
